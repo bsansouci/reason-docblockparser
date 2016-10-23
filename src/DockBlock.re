@@ -38,7 +38,6 @@ and parseParam (lines, accumulator: parsedValues) =>
     if (Str.string_match paramPattern hd 0) {
       let paramName = Str.matched_group 1 hd;
       let paramValue = Str.matched_group 2 hd;
-      print_endline (String.concat " | " [paramName, paramValue]);
       accumulator.params = accumulator.params @ [(paramName, paramValue)]
     };
     parseText (tl, accumulator)
