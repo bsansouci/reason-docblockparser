@@ -1,6 +1,6 @@
 {
   "name": "reason-DockBlockParser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Super basic docblock parser written in reason",
   "repository": {
     "type": "git",
@@ -11,31 +11,37 @@
     "reason",
     "docblock"
   ],
+  "exportedEnvVars": {
+    "OCAMLRUNPARAM": {
+      "global": true,
+      "globalCollisionBehavior": "fail",
+      "val": "b"
+    }
+  },
   "scripts": {
-    "postinstall": "npm run build",
-    "test": "_build/default/src/app.native",
-    "start": "_build/default/src/app.native",
-    "build": "eval $(dependencyEnv) && nopam && rebel",
+    "postinstall": "npm run reasonBuild",
+    "buildHelp": "eval $(dependencyEnv) && nopam && rebuild --help",
+    "reasonBuild": "eval $(dependencyEnv) && nopam && rebuild -use-ocamlfind -I src ./src/Index.native 2>&1 | refmterr",
+    "reasonbuild": "npm run reasonBuild",
+    "start": "eval $(dependencyEnv) && ./_build/src/Index.native",
+    "clean": "rm -r ./_build",
     "top": "eval $(dependencyEnv) && rtop",
     "env": "eval $(dependencyEnv) && env",
     "editor": "eval $(dependencyEnv) && eval $EDITOR",
     "whereisocamlmerlin": "eval $(dependencyEnv) && which ocamlmerlin-reason"
-
+  },
+  "devDependencies": {
+    "@opam-alpha/merlin": "^ 2.5.0"
   },
   "dependencies": {
-    "@opam-alpha/merlin": "^ 2.5.0",
+    "@opam-alpha/core": "^113.33.3",
     "@opam-alpha/ocaml": "4.2.3",
-    "nopam": "https://github.com/reasonml/nopam.git",
-    "dependency-env": "https://github.com/reasonml/dependency-env.git",
-    "reason": "https://github.com/facebook/reason.git",
-    "rebel": "https://github.com/reasonml/rebel.git",
-    "ocamlBetterErrors": "0.0.10",
-    "realpath": "*"
+    "reason": "^ 1.4.0",
+    "fastrealpath": "^0.1.0",
+    "nopam": "^0.1.0",
+    "dependency-env": "^0.0.1"
   },
-  "rebel": {
-    "ocamlfindDependencies": [
-      "core",
-      "Str"
-    ]
+  "engines": {
+    "npm": ">=3.10.0"
   }
 }

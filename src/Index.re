@@ -1,3 +1,4 @@
+
 let docBlockPattern = Str.regexp ".*\\/\\*\\*";
 
 let innerParse docString => {
