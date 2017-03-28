@@ -1,1 +1,2 @@
-true: package(str)
+true: package(str), package(oUnit)
+<test>: package(oUnit)
