@@ -1,2 +1,1 @@
-<node_modules>: -traverse
 true: package(str)

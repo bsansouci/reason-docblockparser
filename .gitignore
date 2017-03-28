@@ -13,7 +13,4 @@ _build/**
 *.run
 *.opt
 
-node_modules
-.jenga
-.merlin
-Index.native
+DockBlock.native
