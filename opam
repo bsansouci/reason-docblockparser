@@ -20,5 +20,5 @@ depends: [
   "ocamlbuild" {build}
   "re"
   "solvuu-build" {build & >= "0.3.0"}
-  "ounit" {test}
+  "ounit"
 ]
