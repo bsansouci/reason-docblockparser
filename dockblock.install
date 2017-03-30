@@ -11,4 +11,5 @@ lib: [
   "?_build/src/DockBlock.cmt" {"DockBlock.cmt"}
   "_build/src/DockBlock.cmx" {"DockBlock.cmx"}
   "_build/src/DockBlock.cmxa" {"DockBlock.cmxa"}
-  "_build/src/DockBlock.o" {"DockBlock.o"} ]
+  "_build/src/DockBlock.o" {"DockBlock.o"}
+  "_build/test/test.native" {"test.native"} ]

@@ -8,6 +8,7 @@ let () =
     let ocamlbuild = Conf.tool "rebuild" os in
     OS.Cmd.run @@ Cmd.(ocamlbuild % "-use-ocamlfind"
                                   %% (v "-I" % "src")
+                                  %% (v "-I" % "test")
                                   %% of_list files)
   in
   let build = Pkg.build ~cmd () in
@@ -15,5 +16,5 @@ let () =
   Ok [
     Pkg.lib "pkg/META";
     Pkg.lib ~exts:(Exts.exts [".cmo"; ".cmx";".cmi"; ".cmt"; ".o"; ".cma"; ".cmxa"; ".a"]) "src/DockBlock" ~dst:"DockBlock";
-
+    Pkg.lib ~exts:(Exts.exts [".native";]) "test/test" ~dst:"test";
   ]
