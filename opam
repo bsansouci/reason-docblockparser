@@ -10,14 +10,13 @@ dev-repo: "https://github.com/CLowbrow/reason-docblockparser"
 build: 
 [[
   "ocaml" "pkg/pkg.ml" "build"
-          "--dev-pkg" "%{dev}%"
 ]]
 remove: ["ocamlfind" "remove" "reason-docblockparser"]
 depends: [
   "ocamlfind" {build}
   "ocamlbuild" {build}
-  "topkg" {build & >= "0.9.0"}
+  "topkg" {build & >= "0.8.1"}
   "reason" {build}
-  "re" {build}
+  "re"
   "ounit" {test}
 ]

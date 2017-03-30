@@ -1,5 +1,5 @@
 description = "Parse docblocks"
-version = "%%VERSION_NUM%%"
+version = "0.0.1"
 requires = ""
 archive(byte) = "DockBlock.cma"
 archive(native) = "DockBlock.cmxa"
