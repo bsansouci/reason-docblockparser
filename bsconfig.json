@@ -1,0 +1,9 @@
+{
+  "name": "reason-docblockparser",
+  "sources": "src",
+  "bs-dependencies": ["re"],
+  "entries": [{
+    "kind": "bytecode",
+    "main": "DockBlock",
+  }],
+}
