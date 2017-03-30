@@ -1,1 +1,4 @@
-true: package(oUnit), package(re), package(re.perl)
+true: bin_annot, safe_string, package(oUnit), package(re), package(re.perl)
+
+<src> : include
+<test> : include

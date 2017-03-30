@@ -7,12 +7,15 @@ homepage: "https://github.com/CLowbrow/reason-docblockparser"
 bug-reports: "https://github.com/CLowbrow/reason-docblockparser/issues"
 license: "MIT"
 dev-repo: "https://github.com/CLowbrow/reason-docblockparser"
-build: [
-  ["rebuild" "-use-ocamlfind" "-I" "src" "./src/DockBlock.native"]
-]
+build: [[
+  "ocaml" "pkg/pkg.ml" "build"
+          "--dev-pkg" "%{dev}%"
+]]
 remove: ["ocamlfind" "remove" "reason-docblockparser"]
 depends: [
   "ocamlfind" {build}
+  "ocamlbuild" {build}
+  "topkg" {build & >= "0.9.0"}
   "reason" {build}
   "re" {build}
   "ounit" {test}

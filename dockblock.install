@@ -1,0 +1,14 @@
+# dockblock
+
+lib: [
+  "_build/opam" {"opam"}
+  "_build/pkg/META" {"META"}
+  "_build/pkg/META" {"META"}
+  "_build/src/DockBlock.a" {"DockBlock.a"}
+  "_build/src/DockBlock.cma" {"DockBlock.cma"}
+  "_build/src/DockBlock.cmi" {"DockBlock.cmi"}
+  "_build/src/DockBlock.cmo" {"DockBlock.cmo"}
+  "?_build/src/DockBlock.cmt" {"DockBlock.cmt"}
+  "_build/src/DockBlock.cmx" {"DockBlock.cmx"}
+  "_build/src/DockBlock.cmxa" {"DockBlock.cmxa"}
+  "_build/src/DockBlock.o" {"DockBlock.o"} ]

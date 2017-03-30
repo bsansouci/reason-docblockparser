@@ -1,0 +1,7 @@
+description = "Parse docblocks"
+version = "%%VERSION_NUM%%"
+requires = ""
+archive(byte) = "DockBlock.cma"
+archive(native) = "DockBlock.cmxa"
+plugin(byte) = "DockBlock.cma"
+plugin(native) = "DockBlock.cmxs"

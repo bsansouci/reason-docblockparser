@@ -3,3 +3,5 @@ S test
 B _build/src
 PKG ounit
 PKG re
+PKG bytes
+PKG topkg
